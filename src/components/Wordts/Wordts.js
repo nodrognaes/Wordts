@@ -12,7 +12,7 @@ const Wordts = ({ solution }) => {
 
     useEffect(() => {
         console.log(guesses, turn, isCorrect)
-    })
+    }, [guesses, turn, isCorrect])
 
     return (
         <div>

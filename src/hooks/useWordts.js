@@ -84,7 +84,7 @@ const useWordts = (solution) => {
             };
 
             const formatted = formatGuess();
-            console.log(formatted)
+            addNewGuess(formatted);
         };
     };
 
