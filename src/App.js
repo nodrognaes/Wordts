@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
       {solution && <Wordts solution={solution} />}
+      <footer>made with 💚</footer>
     </div>
   );
 }
