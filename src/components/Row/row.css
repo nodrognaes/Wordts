@@ -8,12 +8,23 @@
 }
 
 .row > div {
-    display: block;
     border: solid 2px rgb(131, 131, 131);
     border-radius: 20px;
-    width: 15%;
+    width: 20%;
     min-width: 45px;
     height: 50px;
     margin: 0 3px;
-    font-size: 40px;
+    font-size: 35px;
+}
+
+.row > div.blue {
+    background-color: #87cdd8
+}
+
+.row > div.yellow {
+    background-color: #fade57
+}
+
+.row > div.coral {
+    background-color: #f38767
 }

@@ -5,7 +5,7 @@ import './grid.css';
 const Grid = ({ guesses, currentGuess, turn }) => {
 
     return (
-        <div>
+        <div className="gameboard">
             {guesses.map((guess, index) => {
                 return <Row key={index} guess={guess} />
             })}

@@ -34,6 +34,12 @@ const useWordts = (solution) => {
     const addNewGuess = (formattedGuess) => {
          if (currentGuess === solution) {
             setIsCorrect(true);
+            
+            const winAlert = () => {
+                if(!alert('You guessed right!! Play again!')){window.location.reload();}
+            };
+
+            setTimeout(winAlert, 350)
          };
 
          setGuesses((prevGuesses) => {
