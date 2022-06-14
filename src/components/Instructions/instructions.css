@@ -1,0 +1,31 @@
+.instruct {
+    max-width: 35%;
+    margin-top: 20px;
+}
+
+.instructText {
+    border: 3px dashed gold;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.instructText h2 {
+    font-size: 24px;
+}
+
+.instruct img {
+    width: 150px;
+    margin: 20px auto 0;
+}
+
+#blue {
+    background-color: #87cdd8
+}
+
+#yellow {
+    background-color: #fade57
+}
+
+#red {
+    background-color: #f38767
+}

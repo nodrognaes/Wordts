@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import useWordts from "../../hooks/useWordts";
 import Grid from "../Grid/Grid";
+import Instructions from "../Instructions/Instructions";
 import './wordts.css';
 
 const Wordts = ({ solution }) => {
@@ -18,9 +19,9 @@ const Wordts = ({ solution }) => {
 
     return (
         <div className="container">
-            <p>solution: {solution}</p>
-            <h1>current guess: {currentGuess}</h1>
             <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
+            <Instructions />
+            {currentGuess}
         </div>
     )
 };
