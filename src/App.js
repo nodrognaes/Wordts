@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Wordts from './components/Wordts/Wordts';
+import Header from './components/Header/Header';
 
 function App() {
   const [solution, setSolution] = useState(null);
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       {solution && <Wordts solution={solution} />}
       <footer>made with 💚</footer>
     </div>

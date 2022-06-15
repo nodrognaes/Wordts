@@ -1,31 +1,38 @@
 .instruct {
-    max-width: 35%;
-    margin-top: 20px;
+    max-width: 420px;
+    min-width: 250px;
+    margin-top: 15px;
+    margin-right: 40px;
 }
 
 .instructText {
     border: 3px dashed gold;
-    border-radius: 5px;
-    padding: 12px;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    background-color: white;
 }
 
 .instructText h2 {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .instruct img {
-    width: 150px;
-    margin: 20px auto 0;
+    width: 125px;
+    margin: 30px auto;
 }
 
 #blue {
-    background-color: #87cdd8
+    background-color: #87cdd8;
+    color: #87cdd8
 }
 
 #yellow {
-    background-color: #fade57
+    background-color: #fade57;
+    color: #fade57
 }
 
 #red {
-    background-color: #f38767
+    background-color: #f38767;
+    color: #f38767
 }

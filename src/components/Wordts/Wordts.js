@@ -19,9 +19,8 @@ const Wordts = ({ solution }) => {
 
     return (
         <div className="container">
-            <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
             <Instructions />
-            {currentGuess}
+            <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
         </div>
     )
 };

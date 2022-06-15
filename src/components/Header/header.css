@@ -1,0 +1,20 @@
+.header {
+    background: rgb(135,205,216);
+    background: linear-gradient(90deg, rgba(135,205,216,1) 0%, rgba(250,222,87,1) 50%, rgba(243,135,103,1) 100%);
+    margin-top: -25px;
+    padding: 15px;
+}
+
+.header h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.header p {
+    margin-top: -15px;
+}
+
+.header span {
+    color: white;
+    font-weight: bold;
+}

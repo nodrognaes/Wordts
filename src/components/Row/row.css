@@ -5,16 +5,20 @@
     max-width: 80%;
     padding: 8px;
     text-align: center;
+    /* text-transform: uppercase; */
+    font-weight: 600;
+    font-size: 30px;
 }
 
 .row > div {
     border: solid 2px rgb(131, 131, 131);
     border-radius: 20px;
     width: 20%;
-    min-width: 45px;
+    min-width: 50px;
+    max-width: 70px;
     height: 50px;
     margin: 0 3px;
-    font-size: 35px;
+    background-color: white;
 }
 
 .row > div.blue {
