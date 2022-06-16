@@ -21,6 +21,7 @@ const Wordts = ({ solution }) => {
         <div className="container">
             <Instructions />
             <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
+            {solution}
         </div>
     )
 };

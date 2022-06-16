@@ -1,34 +1,100 @@
 .row {
     display: flex;
-    justify-content: space-evenly;
     height: 12%;
     max-width: 80%;
     padding: 8px;
     text-align: center;
     /* text-transform: uppercase; */
-    font-weight: 600;
-    font-size: 30px;
+    font-weight: 300;
+    font-size: 35px;
+    color: rgb(34, 34, 34);
+    -webkit-text-stroke: 1.5px black;
 }
 
 .row > div {
     border: solid 2px rgb(131, 131, 131);
     border-radius: 20px;
-    width: 20%;
-    min-width: 50px;
-    max-width: 70px;
-    height: 50px;
+    min-width: 20%;
+    height: 55px;
     margin: 0 3px;
     background-color: white;
 }
 
 .row > div.blue {
-    background-color: #87cdd8
+    --background-color: #87cdd8;
+    border-color: rgb(34, 34, 34);
+    animation: flip 0.5s ease forwards;
 }
 
 .row > div.yellow {
-    background-color: #fade57
+    --background-color: #fade57;
+    border-color: black;
+    animation: flip 0.5s ease forwards;
 }
 
 .row > div.coral {
-    background-color: #f38767
+    --background-color: #f38767;
+    border-color: black;
+    animation: flip 0.5s ease forwards;
+}
+
+/*animation delays for each letter*/
+.row > div:nth-child(2) {
+    animation-delay: 0.15s;
+}
+.row > div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.row > div:nth-child(4) {
+    animation-delay: 0.45s;
+}
+.row > div:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+/*filled box animation*/
+.row.current > div.filled {
+    animation: bounce 0.15s ease-in-out forwards;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0);
+        background: white;
+    }
+    
+    45% {
+        transform: rotateX(90deg);
+        background: white;
+    }
+
+    55% {
+        transform: rotateX(90deg);
+        color: white;
+        font-weight: bold;
+        background-color: var(--background-color);
+    }
+
+    100% {
+        transform: rotateX(0);
+        color: white;
+        font-weight: bold;
+        background-color: var(--background-color);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+        border-color: dimgray;
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+        border-color: rgb(34, 34, 34);
+    }
 }

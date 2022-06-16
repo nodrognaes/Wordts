@@ -13,7 +13,7 @@ const Instructions = () => {
             <p>and <span id="red">___</span> means tthe letter is not in the secret word.</p>
             <p>GOOD LUCK~!</p>
         </div>
-        <div><img src={yosh}></img></div>
+        <div><img src={yosh} alt="Yoshi"></img></div>
     </div>
     )
 };

@@ -39,7 +39,7 @@ const useWordts = (solution) => {
                 if(!alert('You guessed right!! Play again!')){window.location.reload();}
             };
 
-            setTimeout(winAlert, 350)
+            setTimeout(winAlert, 1050)
          };
 
          setGuesses((prevGuesses) => {
@@ -83,10 +83,12 @@ const useWordts = (solution) => {
             };
             if (history.includes(currentGuess)) {
                 alert('this word has already been guessed!');
+                setCurrentGuess('');
                 return;
             };
             if (currentGuess.length !== 5) {
                 alert('guess must be 5 letters!')
+                return;
             };
 
             const formatted = formatGuess();
