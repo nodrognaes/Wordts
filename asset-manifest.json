@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Wordts/static/css/main.ed8d63ed.css",
+    "main.js": "/Wordts/static/js/main.95e1e284.js",
+    "static/media/pngwing.com.png": "/Wordts/static/media/pngwing.com.b3d44dfb4bbb1327cce6.png",
+    "index.html": "/Wordts/index.html",
+    "main.ed8d63ed.css.map": "/Wordts/static/css/main.ed8d63ed.css.map",
+    "main.95e1e284.js.map": "/Wordts/static/js/main.95e1e284.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed8d63ed.css",
+    "static/js/main.95e1e284.js"
+  ]
+}
