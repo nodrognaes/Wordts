@@ -5,16 +5,17 @@
     padding: 8px;
     text-align: center;
     /* text-transform: uppercase; */
-    font-weight: 300;
+    font-weight: 200;
     font-size: 35px;
     color: rgb(34, 34, 34);
-    -webkit-text-stroke: 1.25px black;
+    -webkit-text-stroke: 1.7px black;
 }
 
 .row > div {
     border: solid 2px rgb(131, 131, 131);
-    border-radius: 20px;
-    min-width: 20%;
+    border-radius: 10px;
+    width: 20%;
+    min-width: 55px;
     height: 55px;
     margin: 0 3px;
     background-color: white;
@@ -22,19 +23,19 @@
 
 .row > div.blue {
     --background-color: #87cdd8;
-    border-color: rgb(34, 34, 34);
+    border-color: rgb(49, 49, 49);
     animation: flip 0.5s ease forwards;
 }
 
 .row > div.yellow {
     --background-color: #fade57;
-    border-color: black;
+    border-color: rgb(49, 49, 49);
     animation: flip 0.5s ease forwards;
 }
 
 .row > div.coral {
     --background-color: #f38767;
-    border-color: black;
+    border-color: rgb(49, 49, 49);
     animation: flip 0.5s ease forwards;
 }
 
@@ -59,24 +60,24 @@
 
 @keyframes flip {
     0% {
-        transform: rotateX(0);
+        transform: rotateY(0);
         background: white;
     }
     
     45% {
-        transform: rotateX(90deg);
+        transform: rotateY(90deg);
         background: white;
     }
 
     55% {
-        transform: rotateX(90deg);
+        transform: rotateY(90deg);
         color: white;
         font-weight: bold;
         background-color: var(--background-color);
     }
 
     100% {
-        transform: rotateX(0);
+        transform: rotateY(0);
         color: white;
         font-weight: bold;
         background-color: var(--background-color);
@@ -90,11 +91,11 @@
     }
 
     50% {
-        transform: scale(1.05);
+        transform: scale(1.03);
     }
 
     100% {
         transform: scale(1);
-        border-color: rgb(34, 34, 34);
+        border-color: rgb(49, 49, 49);
     }
 }

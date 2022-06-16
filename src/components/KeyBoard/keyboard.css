@@ -1,0 +1,16 @@
+.keyboard {
+    max-width: 950px;
+    margin: -20px auto 50px;
+  }
+  .keyboard > div {
+    margin: 7px;
+    width: 73px;
+    height: 53px;
+    background: rgb(233, 233, 233);
+    display: inline-block;
+    border-radius: 6px;
+    border: 1.5px solid;
+    line-height: 50px;
+    box-shadow: 2px 2px #888888;
+    text-transform: capitalize;
+  }

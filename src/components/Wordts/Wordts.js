@@ -2,14 +2,15 @@ import React, { useEffect } from "react";
 import useWordts from "../../hooks/useWordts";
 import Grid from "../Grid/Grid";
 import Instructions from "../Instructions/Instructions";
+import KeyBoard from "../KeyBoard/KeyBoard";
 import './wordts.css';
 
 const Wordts = ({ solution }) => {
     const { currentGuess, handleKeyup, guesses, isCorrect, turn } = useWordts(solution);
 
     useEffect(() => {
-        window.addEventListener('keyup', handleKeyup );
-        
+        window.addEventListener('keyup', handleKeyup);
+
         return () => window.removeEventListener('keyup', handleKeyup);
     }, [handleKeyup]);
 
@@ -18,11 +19,15 @@ const Wordts = ({ solution }) => {
     }, [guesses, turn, isCorrect])
 
     return (
-        <div className="container">
-            <Instructions />
-            <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
-            {solution}
+        <div>
+            <div className="container">
+                <Instructions />
+                <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
+                {/* {solution} */}
+            </div>
+            <KeyBoard />
         </div>
+
     )
 };
 
