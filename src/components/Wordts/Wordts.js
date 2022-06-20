@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import useWordts from "../../hooks/useWordts";
 import Grid from "../Grid/Grid";
 import Instructions from "../Instructions/Instructions";
@@ -7,16 +7,23 @@ import './wordts.css';
 
 const Wordts = ({ solution }) => {
     const { currentGuess, handleKeyup, guesses, isCorrect, turn, usedKeys } = useWordts(solution);
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         window.addEventListener('keyup', handleKeyup);
 
-        return () => window.removeEventListener('keyup', handleKeyup);
-    }, [handleKeyup]);
+        if (isCorrect) {            
+            setTimeout(setShowModal(true), 1050);
+            window.removeEventListener('keyup', handleKeyup);
+        };
 
-    useEffect(() => {
-        console.log(guesses, turn, isCorrect)
-    }, [guesses, turn, isCorrect])
+        if (turn > 5 && !isCorrect) {
+            setTimeout(setShowModal(true), 1050);
+            window.removeEventListener('keyup', handleKeyup);
+        }
+
+        return () => window.removeEventListener('keyup', handleKeyup);
+    }, [handleKeyup, isCorrect, turn]);
 
     return (
         <div>
@@ -26,6 +33,7 @@ const Wordts = ({ solution }) => {
                 {/* {solution} */}
             </div>
             <KeyBoard usedKeys={usedKeys}/>
+            {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution}/>}
         </div>
 
     )

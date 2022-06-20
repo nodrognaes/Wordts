@@ -35,12 +35,6 @@ const useWordts = (solution) => {
     const addNewGuess = (formattedGuess) => {
          if (currentGuess === solution) {
             setIsCorrect(true);
-            
-            const winAlert = () => {
-                if(!alert('You guessed right!! Play again!')){window.location.reload();}
-            };
-
-            setTimeout(winAlert, 1050)
          };
 
          setGuesses((prevGuesses) => {
@@ -119,7 +113,43 @@ const useWordts = (solution) => {
         };
     };
 
-    return {turn, currentGuess, guesses, isCorrect, handleKeyup, usedKeys};
+    const handleKeyClick = ({ key }) => {
+        if (key === 'BACK') {
+            setCurrentGuess((prev) => {
+                return prev.slice(0, -1)
+            })
+            return;  
+        };
+    
+        if (/^[A-Za-z]$/.test(key)) {
+            if (currentGuess.length < 5) {
+                setCurrentGuess((prev) => {
+                    return prev + key;
+                })
+            }
+        };
+
+        if (key === 'ENTER') {
+            if (turn > 5) {
+                alert('no more turns left');
+                return;
+            };
+            if (history.includes(currentGuess)) {
+                alert('this word has already been guessed!');
+                setCurrentGuess('');
+                return;
+            };
+            if (currentGuess.length !== 5) {
+                alert('guess must be 5 letters!')
+                return;
+            };
+
+            const formatted = formatGuess();
+            addNewGuess(formatted);
+        };
+    };
+
+    return {turn, currentGuess, guesses, isCorrect, handleKeyup, handleKeyClick, usedKeys};
 
 };
 
