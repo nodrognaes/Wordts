@@ -6,11 +6,41 @@
     margin: 7px;
     width: 73px;
     height: 53px;
-    background: rgb(233, 233, 233);
+    background: rgb(238, 238, 238);
     display: inline-block;
     border-radius: 6px;
-    border: 1.5px solid;
+    border: 3px solid #87cdd8;
     line-height: 50px;
     box-shadow: 2px 2px #888888;
     text-transform: capitalize;
+    font-weight: bold;
+
+    /* border: 10px solid;
+    border-image-slice: 1;
+    border-width: 2.5px;
+    border-image-source: linear-gradient(90deg, rgba(135,205,216,1) 0%, rgba(250,222,87,1) 50%, rgba(243,135,103,1) 100%);; */
+  }
+
+  .keyboard > div.blue {
+    background-color: #87cdd8;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-in;
+    border: 3px solid #25bed5;
+  }
+
+  .keyboard > div.yellow {
+    background-color: #fade57;
+    font-weight: bold;
+    color: black;
+    border: 3px solid #e8c30d;
+    transition: all 0.3s ease-in;
+  }
+
+  .keyboard > div.coral {
+    color: rgb(92, 92, 92);
+    background-color: #f49d82;
+    font-weight: bold;
+    transition: all 0.3s ease-in;
+    border: 2px solid gray;
   }

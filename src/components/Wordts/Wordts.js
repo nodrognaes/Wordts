@@ -6,7 +6,7 @@ import KeyBoard from "../KeyBoard/KeyBoard";
 import './wordts.css';
 
 const Wordts = ({ solution }) => {
-    const { currentGuess, handleKeyup, guesses, isCorrect, turn } = useWordts(solution);
+    const { currentGuess, handleKeyup, guesses, isCorrect, turn, usedKeys } = useWordts(solution);
 
     useEffect(() => {
         window.addEventListener('keyup', handleKeyup);
@@ -25,7 +25,7 @@ const Wordts = ({ solution }) => {
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
                 {/* {solution} */}
             </div>
-            <KeyBoard />
+            <KeyBoard usedKeys={usedKeys}/>
         </div>
 
     )
