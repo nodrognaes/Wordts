@@ -11,7 +11,7 @@ const KeyBoard = ({ usedKeys, handleKeyClick }) => {
             {keys1 && keys1.map((letter) => {
                 const color = usedKeys[letter.key];
                 return (
-                    <div key={letter.key} className={color} onClick={() => handleKeyClick(letter.key)} onTouchStart={() => handleKeyClick(letter.key)}>{letter.key}</div>
+                    <div key={letter.key} className={color} onClick={() => handleKeyClick(letter.key)}>{letter.key}</div>
                 )
             })}
             <br />
