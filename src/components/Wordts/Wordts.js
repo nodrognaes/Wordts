@@ -33,7 +33,7 @@ const Wordts = ({ solution }) => {
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
                 {/* {solution} */}
             </div>
-            <KeyBoard usedKeys={usedKeys} handleKeyClick={handleKeyClick} />
+            <KeyBoard usedKeys={usedKeys} handleKeyClick={handleKeyClick}/>
             {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution}/>}
         </div>
 

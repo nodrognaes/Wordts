@@ -3,7 +3,7 @@
     margin: -20px auto 50px;
   }
   
-  .keyboard > div {
+  .keyboard > button {
     margin: 7px;
     width: 73px;
     height: 53px;
@@ -22,26 +22,47 @@
     border-image-source: linear-gradient(90deg, rgba(135,205,216,1) 0%, rgba(250,222,87,1) 50%, rgba(243,135,103,1) 100%);; */
   }
 
-  .keyboard > div.blue {
+  .keyboard > button:active {
+    background-color: rgb(216, 216, 216);
+    transform: translateY(2px) translateX(2px);
+    transition: 0s;
+  }
+
+  .keyboard > button.blue {
     background-color: #87cdd8;
     color: black;
     font-weight: bold;
-    transition: all 0.3s ease-in;
+    transition: all 0.5s ease-in;
     border: 3px solid #25bed5;
   }
 
-  .keyboard > div.yellow {
+  .keyboard > button.blue:active {
+    background-color: #81c4ce;
+    transition: 0s;
+  }
+
+  .keyboard > button.yellow {
     background-color: #fade57;
     font-weight: bold;
     color: black;
     border: 3px solid #e8c30d;
-    transition: all 0.3s ease-in;
+    transition: all 0.5s ease-in;
   }
 
-  .keyboard > div.coral {
+  .keyboard > button.yellow:active {
+    background-color: #ecd353;
+    transition: 0s;
+  }
+
+  .keyboard > button.coral {
     color: rgb(92, 92, 92);
     background-color: #f49d82;
     font-weight: bold;
-    transition: all 0.3s ease-in;
+    transition: all 0.5s ease-in;
     border: 2px solid gray;
+  }
+
+  .keyboard > button.coral:active {
+    background-color: #e6957c;
+    transition: 0s;
   }

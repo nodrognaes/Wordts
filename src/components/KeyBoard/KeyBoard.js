@@ -11,21 +11,21 @@ const KeyBoard = ({ usedKeys, handleKeyClick }) => {
             {keys1 && keys1.map((letter) => {
                 const color = usedKeys[letter.key];
                 return (
-                    <div key={letter.key} className={color} onClick={() => handleKeyClick(letter.key)}>{letter.key}</div>
+                    <button key={letter.key} className={color} onClick={() => handleKeyClick(letter.key)}>{letter.key}</button>
                 )
             })}
             <br />
             {keys2 && keys2.map((letter) => {
                 const color = usedKeys[letter.key];
                 return (
-                    <div key={letter.key} className={color} onClick={() => handleKeyClick(letter.key)}>{letter.key}</div>
+                    <button key={letter.key} className={color} onClick={() => handleKeyClick(letter.key)}>{letter.key}</button>
                 )
             })}
             <br />
             {keys3 && keys3.map((letter) => {
                 const color = usedKeys[letter.key];
                 return (
-                    <div key={letter.key} className={color} onClick={() => handleKeyClick(letter.key)}>{letter.key}</div>
+                    <button key={letter.key} className={color} onClick={() => handleKeyClick(letter.key)}>{letter.key}</button>
                 )
             })}
         </div>
