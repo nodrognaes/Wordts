@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './modal.css';
 
 const Modal = ({ isCorrect, turn, solution }) => {
+    useEffect(() => {
+        const listener = event => {
+          if (event.code === "Enter" || event.code === "NumpadEnter") {
+            event.preventDefault();
+            reload();
+          }
+        };
+        document.addEventListener("keydown", listener);
+        return () => {
+          document.removeEventListener("keydown", listener);
+        };
+      }, []);
+
     const reload = () => {
         setTimeout(() => window.location.reload(), 250);
     }
