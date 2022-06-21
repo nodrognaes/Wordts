@@ -6,11 +6,6 @@ const KeyBoard = ({ usedKeys, handleKeyClick }) => {
     const keys2 = [{ 'key': 'a' }, { 'key': 's' }, { 'key': 'd' }, { 'key': 'f' }, { 'key': 'g' }, { 'key': 'h' }, { 'key': 'j' }, { 'key': 'k' }, { 'key': 'l' }];
     const keys3 = [{ 'key': 'z' }, { 'key': 'x' }, { 'key': 'c' }, { 'key': 'v' }, { 'key': 'b' }, { 'key': 'n' }, { 'key': 'm' }, { 'key': 'BACK' }, { 'key': 'ENTER' }];
 
-    const word = [];
-    const clickKeys = (e) => {
-       console.log(e);
-    }
-
     return (
         <div className="keyboard">
             {keys1 && keys1.map((letter) => {
