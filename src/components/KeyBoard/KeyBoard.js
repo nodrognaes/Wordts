@@ -1,4 +1,4 @@
-import React, { Touchable } from "react";
+import React from "react";
 import './keyboard.css'
 
 const KeyBoard = ({ usedKeys, handleKeyClick }) => {
@@ -11,7 +11,7 @@ const KeyBoard = ({ usedKeys, handleKeyClick }) => {
             {keys1 && keys1.map((letter) => {
                 const color = usedKeys[letter.key];
                 return (
-                    <Touchable key={letter.key} className={color} onClick={() => handleKeyClick(letter.key)} onTap={() => handleKeyClick(letter.key)}>{letter.key}</Touchable>
+                    <div key={letter.key} className={color} onClick={() => handleKeyClick(letter.key)} onTouchStart={() => handleKeyClick(letter.key)}>{letter.key}</div>
                 )
             })}
             <br />
