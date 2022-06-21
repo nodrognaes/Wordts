@@ -40,3 +40,8 @@
     margin-top: 10px;
     padding: 5px 12px;
 }
+
+.modal button:active {
+    background-color: rgb(216, 216, 216);
+    transform: translateY(2px) translateX(2px);
+}
