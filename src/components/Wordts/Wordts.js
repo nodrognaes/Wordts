@@ -3,6 +3,7 @@ import useWordts from "../../hooks/useWordts";
 import Grid from "../Grid/Grid";
 import Instructions from "../Instructions/Instructions";
 import KeyBoard from "../KeyBoard/KeyBoard";
+import Modal from "../Modal/Modal";
 import './wordts.css';
 
 const Wordts = ({ solution }) => {
@@ -13,12 +14,12 @@ const Wordts = ({ solution }) => {
         window.addEventListener('keyup', handleKeyup);
 
         if (isCorrect) {            
-            setTimeout(setShowModal(true), 1050);
+            setTimeout(() => setShowModal(true), 1050);
             window.removeEventListener('keyup', handleKeyup);
         };
 
         if (turn > 5 && !isCorrect) {
-            setTimeout(setShowModal(true), 1050);
+            setTimeout(() => setShowModal(true), 1050);
             window.removeEventListener('keyup', handleKeyup);
         }
 
@@ -30,7 +31,7 @@ const Wordts = ({ solution }) => {
             <div className="container">
                 <Instructions />
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
-                {/* {solution} */}
+                {solution}
             </div>
             <KeyBoard usedKeys={usedKeys}/>
             {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution}/>}
