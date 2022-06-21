@@ -12,12 +12,12 @@
     background: #fff;
     padding: 40px;
     border-radius: 10px;
-    margin: 10% auto;
+    margin: 12% auto;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 
     border: 10px solid;
     border-image-slice: 1;
-    border-width: 15px;
+    border-width: 25px;
     border-image-source: linear-gradient(90deg, rgba(135,205,216,1) 0%, rgba(250,222,87,1) 50%, rgba(243,135,103,1) 100%);
 }
 
@@ -37,4 +37,6 @@
     line-height: 35px;
     box-shadow: 2px 2px #888888;
     font-weight: 400;
+    margin-top: 10px;
+    padding: 5px 12px;
 }

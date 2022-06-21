@@ -1,4 +1,6 @@
-{
+import React from "react";
+
+const data = {
     "solutions": [
         {
             "word": "fruit",
@@ -139,6 +141,52 @@
         {
             "word": "misty",
             "id": 35
+        },
+        {
+            "word": "shock",
+            "id": 36
+        },
+        {
+            "word": "store",
+            "id": 37
+        },
+        {
+            "word": "short",
+            "id": 38
+        },
+        {
+            "word": "click",
+            "id": 39
+        },
+        {
+            "word": "dream",
+            "id": 40
+        },
+        {
+            "word": "shine",
+            "id": 41
+        },
+        {
+            "word": "shame",
+            "id": 41
+        },
+        {
+            "word": "party",
+            "id": 42
+        },
+        {
+            "word": "clear",
+            "id": 43
+        },
+        {
+            "word": "woman",
+            "id": 44
+        },
+        {
+            "word": "stick",
+            "id": 45
         }
     ]
-}
+};
+
+export default data;

@@ -2,18 +2,15 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Wordts from './components/Wordts/Wordts';
 import Header from './components/Header/Header';
+import data from './data';
 
 function App() {
   const [solution, setSolution] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3001/solutions')
-    .then(res => res.json())
-    .then(json => {
-      const rand = json[Math.floor(Math.random() * json.length)].word;
-      setSolution(rand);
-    })
-  }, [setSolution])
+    const rand = data.solutions[Math.floor(Math.random() * data.solutions.length)].word;
+    setSolution(rand);
+  }, [setSolution]);
 
   return (
     <div className="App">
