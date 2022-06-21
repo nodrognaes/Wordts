@@ -31,7 +31,7 @@ const Wordts = ({ solution }) => {
             <div className="container">
                 <Instructions />
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
-                {/* {solution} */}
+                {solution}
             </div>
             <KeyBoard usedKeys={usedKeys}/>
             {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution}/>}
