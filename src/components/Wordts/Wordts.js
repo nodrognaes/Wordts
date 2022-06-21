@@ -7,7 +7,7 @@ import Modal from "../Modal/Modal";
 import './wordts.css';
 
 const Wordts = ({ solution }) => {
-    const { currentGuess, handleKeyup, guesses, isCorrect, turn, usedKeys } = useWordts(solution);
+    const { currentGuess, handleKeyup, guesses, isCorrect, turn, usedKeys, handleKeyClick } = useWordts(solution);
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
@@ -33,7 +33,7 @@ const Wordts = ({ solution }) => {
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
                 {/* {solution} */}
             </div>
-            <KeyBoard usedKeys={usedKeys}/>
+            <KeyBoard usedKeys={usedKeys} handleKeyClick={handleKeyClick} />
             {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution}/>}
         </div>
 

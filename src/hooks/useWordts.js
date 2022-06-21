@@ -94,10 +94,6 @@ const useWordts = (solution) => {
         };
 
         if (key === 'Enter') {
-            if (turn > 5) {
-                alert('no more turns left');
-                return;
-            };
             if (history.includes(currentGuess)) {
                 alert('this word has already been guessed!');
                 setCurrentGuess('');
@@ -113,7 +109,7 @@ const useWordts = (solution) => {
         };
     };
 
-    const handleKeyClick = ({ key }) => {
+    const handleKeyClick = (key) => {
         if (key === 'BACK') {
             setCurrentGuess((prev) => {
                 return prev.slice(0, -1)
@@ -130,10 +126,6 @@ const useWordts = (solution) => {
         };
 
         if (key === 'ENTER') {
-            if (turn > 5) {
-                alert('no more turns left');
-                return;
-            };
             if (history.includes(currentGuess)) {
                 alert('this word has already been guessed!');
                 setCurrentGuess('');
