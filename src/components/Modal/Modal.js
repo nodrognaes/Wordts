@@ -3,7 +3,7 @@ import './modal.css';
 
 const Modal = ({ isCorrect, turn, solution }) => {
     const reload = () => {
-        setTimeout(() => window.location.reload(), 300);
+        setTimeout(() => window.location.reload(), 250);
     }
 
     return (
