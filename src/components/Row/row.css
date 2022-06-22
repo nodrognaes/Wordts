@@ -9,6 +9,7 @@
     line-height: 55px;
     color: rgb(34, 34, 34);
     text-transform: uppercase;
+    justify-content: space-evenly;
 }
 
 .row > div {
@@ -100,4 +101,22 @@
         transform: scale(1);
         border-color: rgb(49, 49, 49);
     }
+}
+
+@media screen and (max-width: 850px) {
+    .row {
+        max-width: 80%;
+        margin: 5px auto;
+    }    
+
+    .row > div {
+        max-width: 100px;
+        margin: 0 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .row {
+        max-width: 100%;
+    }    
 }

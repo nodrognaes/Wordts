@@ -1,6 +1,8 @@
 .keyboard {
     max-width: 950px;
     margin: -20px auto 50px;
+    padding: 14px;
+    width: 100%;
   }
   
   .keyboard > button {
@@ -66,3 +68,10 @@
     background-color: #e6957c;
     transition: 0s;
   }
+
+  @media screen and (max-width: 850px) {
+    .keyboard {
+      max-width: 100%;
+      margin: 0 auto 30px;
+    }
+}

@@ -36,3 +36,22 @@
     background-color: #f38767;
     color: #f38767
 }
+
+@media screen and (max-width: 500px) {
+    .instruct {
+        order: 1;
+        max-width: 95%;
+        margin: 0 auto;
+    }  
+}
+
+@media screen and (max-width: 850px) {
+    .instruct {
+        max-width: 75%;
+        margin: 15px auto;
+    }
+
+    .instructText h2 {
+        font-size: 18px;
+    }
+}

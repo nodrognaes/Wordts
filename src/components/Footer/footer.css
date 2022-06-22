@@ -1,0 +1,12 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(209, 209, 209, 0.832);
+    height: 30px;
+}
+
+footer > p {
+    margin-top: 3px;
+}

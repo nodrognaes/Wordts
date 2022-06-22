@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Wordts from './components/Wordts/Wordts';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import data from './data';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
     <div className="App">
       <Header />
       {solution && <Wordts solution={solution} />}
-      <footer>made with 💚</footer>
+      <Footer />
     </div>
   );
 }
