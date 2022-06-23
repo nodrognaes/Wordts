@@ -2,7 +2,7 @@
     background: rgb(135,205,216);
     background: linear-gradient(90deg, rgba(135,205,216,1) 0%, rgba(250,222,87,1) 50%, rgba(243,135,103,1) 100%);
     margin-top: -20px;
-    padding: 15px;
+    padding: 15px 0;
     height: 110px;
     width: 100%;
 }
@@ -22,4 +22,10 @@
     color: white;
     font-weight: bold;
     -webkit-text-stroke: 0.7px black;
+}
+
+@media screen and (max-width: 500px) {
+    .header h1, span {
+        -webkit-text-stroke: 0px;
+    }
 }
