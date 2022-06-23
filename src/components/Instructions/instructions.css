@@ -1,11 +1,11 @@
 .instruct {
     max-width: 420px;
     min-width: 250px;
-    margin-top: 20px;
-    margin-right: 40px;
+    margin: 20px 40px 0 0;
 }
 
 .instructText {
+    box-sizing: border-box;
     border: 3px dashed gold;
     border-radius: 8px;
     padding: 12px 20px;
@@ -47,7 +47,7 @@
 
 @media screen and (max-width: 850px) {
     .instruct {
-        max-width: 75%;
+        max-width: 80%;
         margin: 15px auto;
     }
 
