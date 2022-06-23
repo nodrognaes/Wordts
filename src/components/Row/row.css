@@ -113,11 +113,15 @@
         max-width: 100px;
         margin: 0 5px;
     }
-}
 
-@media screen and (max-width: 850px) {
-    .row > div {
-        -webkit-text-stroke: 0px;
+    @keyframes flip {
+        55% {
+            -webkit-text-stroke: 0px;
+        }
+    
+        100% {
+            -webkit-text-stroke: 0px;
+        }
     }
 }
 
