@@ -115,6 +115,12 @@
     }
 }
 
+@media screen and (max-width: 850px) {
+    .row > div {
+        -webkit-text-stroke: 0px;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .row {
         max-width: 100%;
